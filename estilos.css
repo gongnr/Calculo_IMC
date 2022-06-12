@@ -1,0 +1,53 @@
+body, script, p {
+    margin: 5px;
+    padding: 0px;
+    font-size: 1.2rem;
+    font-family: Arial;
+}
+
+header {
+    display: flex;
+    font-size: 40px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    color: aliceblue;
+    background-color: chocolate;
+}
+
+p {
+    padding: 5px;
+    text-align: justify;
+    margin: 10px;
+}
+
+#tabela {
+    display: flex;
+    color: azure;
+    border-spacing: 3px;
+}
+
+tr, td, th {
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: darkslategrey;
+    padding: 6px;
+    
+}
+
+tr {
+    border-radius: 5rem;
+}
+
+.grau {
+    text-align: center;
+}
+
+input {
+    font-size: large;
+}
+
+button {
+    padding-inline: 40px;
+    font-size: large;
+}

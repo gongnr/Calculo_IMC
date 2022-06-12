@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cálculo do Imc</title>
+    <link href=".\estilos.css" rel="stylesheet" type="text/css">
+    <script src="./imc.js"></script> <!--Caminho para acesso aos scripts em JavaScript para cálculo do IMC e ação do botão-->
+</head>
+
+<body id="pagina">
+    <header>Avaliação do IMC do Aluno</header>
+    <main>
+        <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde para calcular o peso ideal de cada pessoa.</p>
+        <p>O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.</p>
+        <table id="tabela">
+            <tr>
+              <th colspan="3">Interpretação do IMC</th>  
+            </tr>
+            <tr>
+                <td>IMC</td>
+                <td>Classificação</td>
+                <td>Grau de Obesidade</td>
+            </tr>
+            <tr>
+                <td>Menor que 20</td>
+                <td>Abaixo do peso</td>
+                <td class="grau">0</td>
+            </tr>
+            <tr>
+                <td>Entre 20 e 25</td>
+                <td>Normal</td>
+                <td class="grau">0</td>
+            </tr>
+            <tr>
+                <td>Entre 25 e 30</td>
+                <td>Sobrepeso</td>
+                <td class="grau">0</td>
+            </tr>
+            <tr>
+                <td>Entre 30 e 35</td>
+                <td>Obesidade</td>
+                <td class="grau">1</td>
+            </tr>
+            <tr>
+                <td>Entre 35 e 40</td>
+                <td>Obesidade</td>
+                <td class="grau">2</td>
+            </tr>
+            <tr>
+                <td>Acima de 40</td>
+                <td>Obesidade</td>
+                <td class="grau">3</td>
+            </tr>
+        </table>
+
+        <form action="" method="get"> <!--Formulário para entrada de dados a serem atribuídos às variáveis 'peso' e 'altura'-->
+            <fieldset>
+            <label for="peso">Peso do Aluno:</label>
+            <input type="number" id="peso" name="peso" placeholder="Quilos">   
+            </fieldset>
+
+            <fieldset>
+            <label for="altura">Altura do Aluno:</label>
+            <input type="number" id="altura" name="altura" placeholder="Metros">   
+            </fieldset>
+        </form>
+
+        <p>Peso Informado: <span id="pesoInformado"></span> (Quilos)</p> <!--Imprime o valor da varíavel 'peso' para checar se o script de atribuição está funcional-->
+        <p>Altura Informada: <span id="alturaInformada"></span> (Metros)</p> <!--Imprime o valor da varíavel 'altura' para checar se o script de atribuição está funcional-->
+
+        <button onclick="calculoIMC()">IMC</button> <!--Botão que executará a função em JavaScript para cáluclo do IMC e inserção de mensagem indicando o IMC a partir dos parâmetros passados nas entradas acima-->
+        <p id="conclusao"></p>
+    </main>
+</body>
+</html>

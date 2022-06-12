@@ -3,9 +3,9 @@ function calculoIMC() {
     var altura = Number(document.getElementById('altura').value);
     document.getElementById('pesoInformado').innerHTML = peso
     document.getElementById('alturaInformada').innerHTML = altura
-    if (peso <= 0 || altura <= 0) {
-        alert("Informe valores válidos para peso e altura!");
-    } else {
+    if (peso <= 0 || altura < 0) { alert("Informe valores positivos para peso e altura!"); }
+    else if (altura == 0) { alert("Informe valor válido para altura!") } 
+    else {
         var imc = parseInt(peso / (altura * altura))
         if (imc < 20) { situacao = " abaixo do peso" }
         else if (imc < 25) { situacao = " com peso normal" }
